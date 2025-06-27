@@ -1,0 +1,59 @@
+.searchBar {
+  display: flex;
+  gap: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 1400px;
+  max-width: 1600px;
+}
+.input {
+  padding: 0.7rem 1rem;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  min-width: 140px;
+  font-size: 1rem;
+}
+.inputNumber {
+  min-width: 100px;
+}
+.button {
+  background: #ff9000;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.button:hover {
+  background: #3bb77e;
+}
+@media (max-width: 700px) {
+  .searchBar {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
+    padding: 1rem 0.5rem;
+    gap: 0.7rem;
+  }
+  .input, .inputNumber {
+    min-width: 0;
+    width: 100%;
+    font-size: 0.98rem;
+  }
+  .button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.7rem 0;
+  }
+} 

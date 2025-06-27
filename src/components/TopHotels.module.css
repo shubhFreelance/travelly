@@ -1,0 +1,233 @@
+.section {
+  width: auto;
+  background: #232823;
+  border-radius: 18px;
+  margin: 2.5rem 2rem 0 2rem;
+  padding: 2.5rem 0 2.5rem 0;
+}
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+.subtitle {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.badge {
+  background: #34c759;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 1rem;
+  padding: 0.1em 0.8em;
+  margin: 0 0.2em;
+  font-size: 1rem;
+  display: inline-block;
+}
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.row {
+  display: flex;
+  gap: 2rem;
+}
+.hotelCard {
+  background: #232823;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  overflow: hidden;
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  border: 1.5px solid #3a3d36;
+  position: relative;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.hotelCard:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  transform: translateY(-6px) scale(1.01);
+}
+.imageCol {
+  flex: 1.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 1.2em;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+.rating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffb347;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 0 0.7em 0.7em 0;
+  padding: 0.3em 1em 0.3em 0.7em;
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+.favorite {
+  position: absolute;
+  top: 0.7em;
+  right: 0.7em;
+  background: rgba(0,0,0,0.18);
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.infoCol {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.2em 1.2em 1.2em 0;
+  min-width: 0;
+}
+.location {
+  color: #bdbdbd;
+  font-size: 0.98em;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  margin-bottom: 0.5em;
+}
+.hotelTitle {
+  color: #fff;
+  font-size: 1.15em;
+  font-weight: 600;
+  margin-bottom: 0.7em;
+}
+.featuresRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  margin-bottom: 1.2em;
+}
+.feature {
+  color: #ffb347;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  border-top: 1px solid #3a3d36;
+  padding-top: 1em;
+}
+.price {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.perNight {
+  color: #bdbdbd;
+  font-size: 0.9em;
+  font-weight: 400;
+  margin-left: 0.2em;
+}
+.bookBtn {
+  background: #34c759;
+  color: #fff;
+  border: none;
+  border-radius: 2em;
+  padding: 0.5em 1.5em;
+  font-weight: 700;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.bookBtn:hover {
+  background: #28a745;
+}
+@media (max-width: 1100px) {
+  .row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .hotelCard {
+    flex-direction: column;
+    min-width: 0;
+  }
+  .imageCol, .infoCol {
+    width: 100%;
+    padding: 0;
+  }
+  .imageWrapper {
+    margin: 1.2em auto 0.5em auto;
+  }
+}
+@media (max-width: 900px) {
+  .row {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .hotelCard {
+    flex-direction: column;
+    min-width: 0;
+    width: 100%;
+    font-size: 0.98em;
+  }
+  .imageCol, .infoCol {
+    width: 100%;
+    padding: 0;
+  }
+  .imageWrapper {
+    margin: 1.2em auto 0.5em auto;
+  }
+}
+@media (max-width: 600px) {
+  .section {
+    padding: 1rem 0.2rem 1rem 0.2rem;
+    border-radius: 0;
+  }
+  .header {
+    margin-bottom: 1rem;
+  }
+  .hotelCard {
+    padding: 0.5em 0.2em;
+  }
+}
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0;
+} 
